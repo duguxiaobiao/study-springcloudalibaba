@@ -11,6 +11,8 @@
         <module>stock</module>
         <module>order-nacos</module>
         <module>stock-nacos</module>
+        <module>order-nacos-ribbon</module>
+        <module>order-nacos-openfeign</module>
     </modules>
     <name>study-springcloudalibaba</name>
     <description>Demo project for Spring Boot</description>

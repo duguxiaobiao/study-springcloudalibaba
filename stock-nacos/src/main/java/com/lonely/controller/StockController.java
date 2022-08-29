@@ -1,5 +1,6 @@
 package com.lonely.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/stock")
 public class StockController {
 
+    @Value("${server.port}")
+    private int port;
+
 
     /**
      * 扣减库存
@@ -20,7 +24,7 @@ public class StockController {
      */
     @GetMapping("/reduct")
     public String reduct() {
-        return "扣减成功";
+        return "扣减成功" + port;
     }
 
 

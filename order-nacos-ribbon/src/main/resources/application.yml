@@ -1,0 +1,23 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: order-nacos-ribbon
+  cloud:
+    nacos:
+      # 注册中心地址
+      server-addr: localhost:8848
+
+      #服务注册配置
+      discovery:
+        #配置nacos用户名和密码
+        username: nacos
+        password: nacos
+        namespace: public # 命名空间，默认为public
+
+
+# 使用yml方式配置负载均衡策略
+stock-nacos:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule

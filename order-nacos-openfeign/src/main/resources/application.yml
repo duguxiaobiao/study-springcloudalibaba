@@ -1,0 +1,40 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: order-nacos-ribbon
+  cloud:
+    nacos:
+      # 注册中心地址
+      server-addr: localhost:8848
+
+      #服务注册配置
+      discovery:
+        #配置nacos用户名和密码
+        username: nacos
+        password: nacos
+        namespace: public # 命名空间，默认为public
+
+
+# 以下为手动集成openfeign调试日志方式
+## 首先需要把feign接口库的日志设置为debug，不然默认是info，看不到openfeign的调试日志
+#logging:
+#  level:
+#    com.lonely.feign.StockFeignService: debug
+#
+#feign:
+#  client:
+#    config:
+#
+#      #指定服务名
+#      stack-nacos:
+#        #设置指定服务的openfeign日志
+#        loggerLevel: BASIC
+#        # 设置超时时间，单位毫秒
+#        connectTimeout: 2000
+#        readTimeout: 3000
+#        # 设置拦截器
+#        requestInterceptors[0]:
+#          com.lonely.interceptors.CustomFeignInterceptor
+

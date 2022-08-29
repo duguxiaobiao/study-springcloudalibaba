@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: order-simple
+    name: order-nacos
   cloud:
     nacos:
       # 注册中心地址
@@ -14,4 +14,12 @@ spring:
         #配置nacos用户名和密码
         username: nacos
         password: nacos
-        namespace: public
+        namespace: public # 命名空间，默认为public
+        #group: dev # 分组，细粒度，默认为 DEFAULT_GROUP
+        heart-beat-interval: 5 # 客户端向服务端发送心跳包的间隔时间
+        register-enabled: true # 是否向服务端注册服务，默认为true
+        ip-delete-timeout: 30 # 服务超时时，多久删除服务
+        weight: 1 # 权重
+        service: ${spring.application.name} # 服务名，默认为 spring.application.name 的值
+        watch-delay: 30000 # 向服务端拉去数据的时间，单位毫秒
+        secure: false # 是否是https调用
