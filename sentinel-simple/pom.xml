@@ -30,6 +30,13 @@
             <version>1.8.0</version>
         </dependency>
 
+        <!--集成sentinel注解-->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-annotation-aspectj</artifactId>
+            <version>1.8.0</version>
+        </dependency>
+
 
     </dependencies>
 
