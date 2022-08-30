@@ -1,0 +1,15 @@
+server:
+  port: 7500
+
+
+user:
+  name: dugu_local
+  age: 21
+
+spring:
+  profiles:
+    #设置环境
+    active: dev
+
+  application:
+    name: config.nacos

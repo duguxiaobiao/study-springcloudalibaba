@@ -1,0 +1,29 @@
+
+
+spring:
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      server-addr: localhost:8848
+      config:
+        #设置命名空间
+        namespace: e6bd7c28-8835-419a-b912-78b3d099bd90
+        file-extension: yml #设置配置信息扩展名，默认是properties
+        refresh-enabled: true #默认为true，如果为false，则关闭客户端的动态更新
+        # 加载自定义的配置
+        extension-configs:
+          - dataId: config.nacos-common.yml
+            refresh: true
+
+        # shared-configs 的功能同 extension-configs 一样，只是优先级不一样
+#        shared-configs:
+#          - dataId: config.nacos-common.yml
+#            refresh: true
+
+
+#注意点：
+# 1. 如果是不带profile的，则可以直接使用 spring.application.name 的命名，不需要带后缀
+# 2. 如果是带profile的，一定要加上后缀
+# 3. 命名空间如果不是默认的publish，一定要使用 nacos生成的dataid
+# 4. 优先级--》 profile > 本地项目配置文件 > extension-configs > shared-configs
