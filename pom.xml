@@ -14,6 +14,7 @@
         <module>order-nacos-ribbon</module>
         <module>order-nacos-openfeign</module>
         <module>config-nacos</module>
+        <module>sentinel-simple</module>
     </modules>
     <name>study-springcloudalibaba</name>
     <description>Demo project for Spring Boot</description>
