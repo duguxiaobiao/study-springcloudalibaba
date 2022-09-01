@@ -15,6 +15,9 @@
         <module>order-nacos-openfeign</module>
         <module>config-nacos</module>
         <module>sentinel-simple</module>
+        <module>order-sentinel</module>
+        <module>order-nacos-feign-seata</module>
+        <module>stock-nacos-feign-seata</module>
     </modules>
     <name>study-springcloudalibaba</name>
     <description>Demo project for Spring Boot</description>
