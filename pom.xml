@@ -21,6 +21,7 @@
         <module>gateway</module>
         <module>gateway-nacos</module>
         <module>gateway-nacos-sentinel</module>
+        <module>gateway-nacos-skywalking</module>
     </modules>
     <name>study-springcloudalibaba</name>
     <description>Demo project for Spring Boot</description>
