@@ -18,6 +18,9 @@
         <module>order-sentinel</module>
         <module>order-nacos-feign-seata</module>
         <module>stock-nacos-feign-seata</module>
+        <module>gateway</module>
+        <module>gateway-nacos</module>
+        <module>gateway-nacos-sentinel</module>
     </modules>
     <name>study-springcloudalibaba</name>
     <description>Demo project for Spring Boot</description>
